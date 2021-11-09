@@ -6,14 +6,14 @@ We include an overview of the files included in this repository. Additionally, w
 ## Overview of files
 
 ###  __Folder: `res/`__
-The `res/` folder contains two `.jar` files which constitute the system-under-test. Both files have been included as dependencies in the `pom.xml` file. However, in order for the project to build successfully, you must install both `.jar` files manually on your maven build path. To do so, you must run the following commands:
+The `res/` folder contains two `.jar` files which constitute the system-under-test. Both files have been included as dependencies in the `pom.xml` file. However, in order for the project to build successfully, you must install both `.jar` files manually on your maven build path. To do so, you must run the following commands (while in the `A3/` directory):
 * For the `cruisecontrol-api-1.0-SNAPSHOT.jar` file: <br>
 ```
-mvn install:install-file –Dfile=<path-to-api-jar> -DgroupId=ca.mcgill.ecse429.cruisecontrol -DartifactId=api -Dversion=1.0
+mvn install:install-file -Dfile=res/cruisecontrol-api-1.0-SNAPSHOT.jar -DgroupId=ca.mcgill.ecse429.cruisecontrol -DartifactId=api -Dversion=1.0 -Dpackaging=jar
 ```
 * For the `cruisecontrol-impl-1.0-SNAPSHOT.jar` file: <br>
 ```
-mvn install:install-file –Dfile=<path-to-impl-jar> -DgroupId=ca.mcgill.ecse429.cruisecontrol -DartifactId=impl -Dversion=1.0
+mvn install:install-file -Dfile=res/cruisecontrol-impl-1.0-SNAPSHOT.jar -DgroupId=ca.mcgill.ecse429.cruisecontrol -DartifactId=impl -Dversion=1.0 -Dpackaging=jar
 ```
 
 ---
